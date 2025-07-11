@@ -19,7 +19,7 @@ model Session {
   state         String
   isOnline      Boolean   @default(false)
   scope         String?
-  expires       DateTime?
+  expires       TIMESTAMP?
   accessToken   String
   userId        BigInt?
   firstName     String?
@@ -36,8 +36,8 @@ model Contract {
   name        String
   content     String   
   isActive    Boolean  @default(true)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt   TIMESTAMP @default(now())
+  updatedAt   TIMESTAMP @updatedAt
   shop        String
   
   // Relationship to SKU mappings
@@ -53,7 +53,7 @@ model ContractSkuMapping {
   sku        String
   productId  String?
   variantId  String?
-  createdAt  DateTime @default(now())
+  createdAt  TIMESTAMP @default(now())
   
   // Relationship to contract
   contract   Contract @relation(fields: [contractId], references: [id], onDelete: Cascade)
@@ -68,7 +68,7 @@ model SignedContract {
   customerEmail   String?
   customerName    String?
   signatureData   String   
-  signedAt        DateTime @default(now())
+  signedAt        TIMESTAMP @default(now())
   ipAddress       String?
   shop            String
   
