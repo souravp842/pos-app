@@ -9,8 +9,8 @@ generator client {
 // enough when changing adapters.
 // See https://www.prisma.io/docs/orm/reference/prisma-schema-reference#string for more information
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url      = "file:dev.sqlite"
 }
 
 model Session {
@@ -19,7 +19,7 @@ model Session {
   state         String
   isOnline      Boolean   @default(false)
   scope         String?
-  expires       DateTime?  @default(now())
+  expires       DateTime?
   accessToken   String
   userId        BigInt?
   firstName     String?

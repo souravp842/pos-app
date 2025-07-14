@@ -3,7 +3,7 @@
 client_id = "6fb0fda58c6db8c253f86ca088889442"
 name = "POS-app"
 handle = "pos-app-65"
-application_url = "https://pos-app-3.onrender.com"
+application_url = "https://brown-trailer-stock-studying.trycloudflare.com"
 embedded = true
 
 [build]
@@ -26,7 +26,7 @@ api_version = "2025-07"
 scopes = "write_products"
 
 [auth]
-redirect_urls = ["https://pos-app-3.onrender.com/auth/callback", "https://pos-app-3.onrender.com/auth/shopify/callback", "https://pos-app-3.onrender.com/api/auth/callback"]
+redirect_urls = ["https://brown-trailer-stock-studying.trycloudflare.com/auth/callback", "https://brown-trailer-stock-studying.trycloudflare.com/auth/shopify/callback", "https://brown-trailer-stock-studying.trycloudflare.com/api/auth/callback"]
 
 [pos]
 embedded = false
